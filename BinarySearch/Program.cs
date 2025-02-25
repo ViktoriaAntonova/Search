@@ -48,7 +48,7 @@ namespace BinarySearch
                     int left = mid - 1;
                     while (left >= 0 && arr[left] == target)
                     {
-                        positions.Add(left);
+                        positions.Add(left) ;
                         count++;
                         left--;
                     }
