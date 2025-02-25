@@ -1,0 +1,40 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace zad3_search
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int size = 10;
+            bool sorted = false;
+            int[] array = CreateArray.Create(size, sorted);
+            Console.WriteLine("Original array:");
+            PrintArray(array);
+            int target = int.Parse(Console.ReadLine());
+            int foundIndex = Lsearch.LinearSearch(ref array, target);
+
+            if (foundIndex != -1)
+            {
+                Console.WriteLine($"Element {target} found at index {foundIndex}. Array after transposing:");
+            }
+            else
+            {
+                Console.WriteLine($"Element {target} not found in the array.");
+            }
+            PrintArray(array);
+        }
+        static void PrintArray(int[] array)
+        {
+            foreach (int element in array)
+            {
+                Console.Write(element + " ");
+            }
+            Console.WriteLine();
+        }
+    }
+}
