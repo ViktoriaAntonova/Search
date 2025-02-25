@@ -26,7 +26,7 @@ namespace BinarySearch
 
             foreach (var position in result.Positions)
             {
-                Console.WriteLine(position) ;
+                Console.WriteLine(position);
             }
         }
         static SearchRESULT BinarySearch(int[] arr, int target)
